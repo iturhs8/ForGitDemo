@@ -1,0 +1,11 @@
+
+
+public class DayOfWeek {
+	int findDOW(int day, int month, int year ){
+		
+	}
+	public static void main(String[] args) {
+		
+	}
+}
+

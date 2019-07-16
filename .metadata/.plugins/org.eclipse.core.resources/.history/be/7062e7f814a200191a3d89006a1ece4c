@@ -1,0 +1,14 @@
+
+public class StackUser {
+	public void fill(Stack s) {
+		
+		
+		
+	}
+	
+	public static void main() {
+		
+		FixedArrayStack object1 = new FixedArrayStack();
+		object1.stackArray[] = {1,2,3,4,5,6};
+	}
+}

@@ -1,0 +1,31 @@
+//import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class LambdaDemo {
+	
+	interface sort  {
+//		return s1.length()-s2.length();
+		String compare(String s1, String s2);
+	}
+	
+	
+
+	public static int main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=0;
+		ArrayList<String> a = new ArrayList<>();
+		a.add("Hello");
+		a.add("this");
+		a.add("is");
+		a.add("Shruti");
+		a.add("what");
+		a.add("is");
+		a.add("up");
+		a.add("these");
+		a.add("days");
+		//System.out.println(a);
+		sort s = (String a.get(i), String a.get(i+1))->{return s1.length()-s2.length();}
+		
+	}
+
+}

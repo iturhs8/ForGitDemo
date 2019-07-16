@@ -1,0 +1,22 @@
+
+public class StackUser {
+	public void fill(Stack s) {
+		for (i=0;i<10;i++)
+		{
+			s.push(i);
+			System.out.println(i);
+		}
+		
+		
+	}
+	public void empty(Stack s) {
+		
+	}
+	
+	public static void main() {
+		int i=0;
+		FixedArrayStack object1 = new FixedArrayStack();
+		
+	
+	}
+}

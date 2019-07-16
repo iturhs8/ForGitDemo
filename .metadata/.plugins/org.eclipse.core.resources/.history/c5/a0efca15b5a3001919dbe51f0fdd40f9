@@ -1,0 +1,26 @@
+//import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.lang.invoke.LambdaConversionException;
+
+public class LambdaDemo {
+	
+	interface sort  {
+////		return s1.length()-s2.length();
+//		String compare(String s1, String s2);
+		String sort1(String a);
+	}
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=0;
+		String[] a = {"Hello","this", "is","Shruti"};
+		Arrays.sort1(a,(s1 ,s2) -> {s1.length() - s2.length()});
+		//System.out.println(a);
+		
+		
+	}
+}
+

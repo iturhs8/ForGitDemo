@@ -1,0 +1,57 @@
+package com.visa.training.jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+//DAO class has CRUD + Query methods 
+public class ProductDAO {
+
+	public static int save(Product p) throws SQLException {
+		// Insert
+		int generatedId = 0;
+		try (Connection c = JdbcUtil.getConnection()) {
+
+			// String sql = "insert into product values(" + p.getId() + ",'" + p.getName() +
+			// "'," + p.getPrice() + ","
+			// + p.getQoh() + ")";
+			String psql = "insert into product(product_name, product_price,product_qoh) values(?,?,?)";
+			PreparedStatement s = c.prepareStatement(psql,Statement.RETURN_GENERATED_KEYS);
+			//s.setInt(1, p.getId());
+			s.setString(1, p.getName());
+			s.setFloat(2, p.getPrice());
+			s.setInt(3, p.getQoh());
+			s.executeUpdate();
+			
+			ResultSet keys = s.getGeneratedKeys();
+			keys.next();
+			generatedId = keys.getInt(1);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	return generatedId;
+	}
+//		public Product findById(Integer id) {
+//		//Read based on Id
+//		}
+//		public List<Product> findAll(){
+//		//Read All
+//		}
+//		public void remove(Integer id) {
+//		//delete	
+//		}
+//		public void update(Product updated) {
+//		//update	
+//		}
+
+	public static void main(String[] args) throws SQLException {
+		ProductDAO dao = new ProductDAO();
+
+		Product toBeSaved = new Product("Pencil box", 20, 3);
+		dao.save(toBeSaved);
+	}
+}

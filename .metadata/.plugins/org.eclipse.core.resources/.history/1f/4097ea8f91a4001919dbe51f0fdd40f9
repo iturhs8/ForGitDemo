@@ -1,0 +1,31 @@
+package com.visa.training.threads;
+
+public class Buffer {
+	int data;
+	boolean available = false;
+	public synchronized void produce(int newData) {
+		while(available) {
+			try{
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		data = newData;
+		available = true;
+	}
+	public synchronized
+	int consume() {
+		while(!available) {
+			try{
+				Thread.sleep(100);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+		System.out.println("Consumer consuming "+data);
+		available = false;
+		return data;
+	}
+
+}

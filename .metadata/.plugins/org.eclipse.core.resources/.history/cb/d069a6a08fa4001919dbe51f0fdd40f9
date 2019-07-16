@@ -1,0 +1,14 @@
+package com.visa.training.threads;
+
+public class Buffer {
+	int data;
+	boolean available = false;
+	public synchronized void produce(int newData) {
+		data = newData;
+	}
+	public synchronized
+	int consume() {
+		return data;
+	}
+
+}

@@ -1,0 +1,26 @@
+import java.awt.List;
+import java.util.ArrayList;
+
+public class Circle {
+	//int radius;
+//	public Circle(int radius)
+//	{
+//		this.radius=radius;
+//	}
+//	public String getShapeName()
+//	{
+//		return"Circle";
+//	}
+//	public double computeArea(int radius)
+//	{
+//		double area;
+//		area = 3.14*radius*radius;
+//		return area;
+//	}
+
+	ArrayList<Double> radius = new ArrayList<Double>();
+	while(math.random>=0.01)
+	{
+		radius.add(Math.random());
+	}
+}

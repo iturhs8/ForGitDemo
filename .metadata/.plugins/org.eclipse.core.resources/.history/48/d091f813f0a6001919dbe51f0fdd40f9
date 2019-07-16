@@ -1,0 +1,68 @@
+package com.visa.training.jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+//DAO class has CRUD + Query methods 
+public class ProductDAO {
+
+	public static void save(Product p) throws SQLException {
+		// Insert
+
+		try (Connection c = JdbcUtil.getConnection()) {
+
+			
+			// s.executeUpdate("Insert INTO product" + "VALUES (2,'Box',20,2)");
+//			String query1 = "Insert into product(product_id, product_name, product_price, product_qoh)"
+//					+ " values (1,'Box',20,2)";
+//			int count = s.executeUpdate(query1);
+//			System.out.println(count);
+//
+//			String query2 = "Insert into product(product_id, product_name, product_price, product_qoh)"
+//					+ " values (2,'Pencil_Box',40,20.5)";
+//			count = s.executeUpdate(query2);
+//			System.out.println(count);
+			String sql = "insert into product values("+p.getId()+",'"+p.getName()+"',"+p.getPrice()+","+p.getQoh()+")";
+			String psql = "insert into product values(?,?,?,?)";
+			PreparedStatement s = c.prepareStatement(psql);
+			s.setInt(1, p.getId());
+			s.setString(2, p.getName());
+			s.setFloat(3, p.getPrice());
+			s.setInt(4, p.getQoh());
+			
+	
+			
+			//Statement s = c.createStatement();
+			s.executeUpdate();
+			
+			
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			//System.out.println(e);
+			e.printStackTrace();
+		}
+	}
+//		public Product findById(Integer id) {
+//		//Read based on Id
+//		}
+//		public List<Product> findAll(){
+//		//Read All
+//		}
+//		public void remove(Integer id) {
+//		//delete	
+//		}
+//		public void update(Product updated) {
+//		//update	
+//		}
+
+	public static void main(String[] args) throws SQLException {
+		ProductDAO dao = new ProductDAO();
+
+		Product toBeSaved = new Product(2,"box",20,3);
+		dao.save(toBeSaved);
+	}
+}

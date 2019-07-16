@@ -1,0 +1,6 @@
+
+public class StackUser {
+	public void fill(Stack s) {
+		
+	}
+}

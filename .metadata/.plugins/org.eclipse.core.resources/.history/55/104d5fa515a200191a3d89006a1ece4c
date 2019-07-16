@@ -1,0 +1,18 @@
+
+public class StackUser {
+	public void fill(Stack s) {
+		
+		
+		
+	}
+	
+	public static void main() {
+		int i=0;
+		FixedArrayStack object1 = new FixedArrayStack();
+		for (i=0;i<10;i++)
+		{
+			fill();
+		}
+	
+	}
+}

@@ -1,0 +1,10 @@
+//import java.util.Arrays;
+
+public class FloatError {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+	}
+
+}

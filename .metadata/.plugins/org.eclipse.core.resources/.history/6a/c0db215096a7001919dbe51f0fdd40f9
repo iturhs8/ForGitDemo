@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Enter Product here</title>
+</head>
+<body>
+<form action = "insert" method = "get">
+
+Value1 <input name=product_id><br>
+Value2 <input name=product_name><br>
+
+</form>
+
+
+</body>
+</html>

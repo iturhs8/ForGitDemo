@@ -1,0 +1,51 @@
+package com.visa.training.jdbc;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+//DAO class has CRUD + Query methods 
+public class ProductDAO {
+
+	public static void save(Product toBeSaved) throws SQLException {
+		// Insert
+		try {
+			Connection c = JdbcUtil.getConnection();
+			Statement s = c.createStatement();
+			//s.executeUpdate("Insert INTO product" + "VALUES (2,'Box',20,2)");
+			String query = "Insert into product(id, name, price, qoh)"+" values (1,'Box',20,2)";
+			int count = s.executeUpdate(query);
+			
+			c.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}finally {
+			
+		}
+	}
+//		public Product findById(Integer id) {
+//		//Read based on Id
+//		}
+//		public List<Product> findAll(){
+//		//Read All
+//		}
+//		public void remove(Integer id) {
+//		//delete	
+//		}
+//		public void update(Product updated) {
+//		//update	
+//		}
+	
+	public static void main(String[] args) {
+		Product p = new Product();
+		
+		try {
+			save(p);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

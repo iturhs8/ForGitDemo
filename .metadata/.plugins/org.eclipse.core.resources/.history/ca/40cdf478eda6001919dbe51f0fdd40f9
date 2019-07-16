@@ -1,0 +1,59 @@
+package com.visa.training.jdbc;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.List;
+
+//DAO class has CRUD + Query methods 
+public class ProductDAO {
+
+	public static void save(Product toBeSaved) throws SQLException {
+		// Insert
+		Connection c = JdbcUtil.getConnection();
+		try {
+
+			Statement s = c.createStatement();
+			// s.executeUpdate("Insert INTO product" + "VALUES (2,'Box',20,2)");
+			String query1 = "Insert into product(product_id, product_name, product_price, product_qoh)"
+					+ " values (1,'Box',20,2)";
+			int count = s.executeUpdate(query1);
+			System.out.println(count);
+
+			String query2 = "Insert into product(product_id, product_name, product_price, product_qoh)"
+					+ " values (2,'Pencil_Box',40,20.5)";
+			count = s.executeUpdate(query2);
+			System.out.println(count);
+
+			c.close();
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+			c.close();
+		}
+	}
+//		public Product findById(Integer id) {
+//		//Read based on Id
+//		}
+//		public List<Product> findAll(){
+//		//Read All
+//		}
+//		public void remove(Integer id) {
+//		//delete	
+//		}
+//		public void update(Product updated) {
+//		//update	
+//		}
+
+	public static void main(String[] args) {
+		Product p = new Product();
+
+		try {
+			save(p);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

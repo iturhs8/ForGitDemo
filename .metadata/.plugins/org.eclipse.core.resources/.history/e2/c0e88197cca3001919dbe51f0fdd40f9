@@ -1,0 +1,18 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.function.Predicate;
+
+public class PredicateDemo {
+
+	public static void main(String[] args) {
+		List<String> words = Arrays.asList("hi","Hello","How","are","you");
+		List<String> newWords = allMatch(words,s->s.length()>4);
+		
+	}
+
+	private static <T> T allMatch(List<T> words, int i) {
+		
+		return null;
+	}
+
+}

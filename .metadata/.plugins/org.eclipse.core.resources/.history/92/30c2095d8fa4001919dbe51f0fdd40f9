@@ -1,0 +1,12 @@
+package com.visa.training.threads;
+
+public class Buffer {
+	int data;
+	public void produce(int newData) {
+		data = newData;
+	}
+	public int consume() {
+		return data;
+	}
+
+}

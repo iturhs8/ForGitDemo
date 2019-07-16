@@ -1,0 +1,21 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+public class LambdaDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ArrayList<String> a = new ArrayList<>();
+		a.add("Hello");
+		a.add("this");
+		a.add("is");
+		a.add("Shruti");
+		a.add("What");
+		a.add("is");
+		a.add("up");
+		a.add("these");
+		a.add("days");
+		
+	}
+
+}

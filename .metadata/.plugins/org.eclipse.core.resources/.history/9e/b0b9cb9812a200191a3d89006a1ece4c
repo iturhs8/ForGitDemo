@@ -1,0 +1,14 @@
+
+public class FixedArrayStack implements Stack {
+	
+	Object[] stackArray; 
+	public void push(Object element) {
+		
+	}
+	public Object pop() {
+		return ;
+	}
+	
+	
+
+}

@@ -1,0 +1,28 @@
+//import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class LambdaDemo {
+	
+	interface sort  {
+////		return s1.length()-s2.length();
+//		String compare(String s1, String s2);
+		String sort1(String a, String b);
+	}
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int i=0;
+		String[] a = {"Hello","this", "is","Shruti"};
+		Arrays.sort(a,(s1 , s2) -> s1.length() - s2.length());
+		System.out.println("Ascending Order"+Arrays.asList(a));
+		//System.out.println(a);
+		Arrays.sort(a,(s1,s2)->s2.length()-s1.length());
+		System.out.println("Descending Order"+Arrays.asList(a));
+		
+		
+	}
+}
+

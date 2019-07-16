@@ -1,0 +1,14 @@
+
+public class ChemicalElement {
+	
+	String symbolicName;
+	int atomicNumber;
+	String fullName;
+	
+	
+	
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+package com.visa.training.threads;
+
+public class ProducerConsumerDemo {
+	
+	public static void main(String[] args) {
+		Buffer buffer = new Buffer;
+	}
+}

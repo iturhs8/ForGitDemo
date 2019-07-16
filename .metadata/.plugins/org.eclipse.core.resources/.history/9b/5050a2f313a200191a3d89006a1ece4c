@@ -1,0 +1,17 @@
+
+public class FixedArrayStack implements Stack {
+	int i=0;
+	Object[] stackArray; 
+	public void push(Object element) {
+		stackArray[i]=element;
+		System.out.println(stackArray[i]);
+		i++;
+	}
+	public Object pop() {
+		Object var1=0;
+		var1= stackArray[i-1];
+		
+		return var1;
+			}
+
+}

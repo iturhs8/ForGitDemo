@@ -1,0 +1,24 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.Optional;
+
+public class LambdaStream {
+
+		public static void main(String[] args) {
+			List<String> words = Arrays.asList("hi", "hello", "How","are","you","doing","?","because","everything","is","beautiful");
+			words.stream().forEach(s->System.out.println("  "+s));
+			words.stream().forEach(System.out::println);
+			words.stream().map(s->s+"!").forEach(System.out::println);
+			words.stream().map(s -> s.replace("i","eye")).forEach(System.out::println);
+			words.stream().map(String::toUpperCase).forEach(System.out::println);
+			words.stream().filter(s->s.length()<4).forEach(System.out::println);
+			words.stream().filter(s->s.contains("b")).forEach(System.out::println);
+			words.stream().filter(s->s.length()%2==0).forEach(System.out::println);
+			String concatination = words.stream().reduce("", (s1,s2)->s1+s2.toUpperCase());
+			System.out.println(concatination);
+			String mapReduce = words.stream().map(String::toUpperCase).reduce("",(s1,s2)->s1+s2);
+			System.out.println(mapReduce);
+			Optional<String> optionalConcat = words.stream().reduce((s1,s2)->s1+","+s2);
+			System.out.println(optionalConcat);
+		}
+}

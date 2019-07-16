@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 4 elements to &apos;MyProject/src/com.visa.training.stack&apos;&#x0A;- Original project: &apos;MyProject&apos;&#x0A;- Destination element: &apos;MyProject/src/com.visa.training.stack&apos;&#x0A;- Original elements:&#x0A;     Stack.java&#x0A;     FixedArrayStack.java&#x0A;     StackUser.java&#x0A;     StackApp.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;com.visa.training.stack" element1="/src&lt;{Stack.java" element2="/src&lt;{FixedArrayStack.java" element3="/src&lt;{StackUser.java" element4="/src&lt;{StackApp.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1562669381070" units="4" version="1.0"/>
+</session>

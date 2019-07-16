@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract method &apos;private Product mapRow(ResultSet rs) throws SQLException &apos; from &apos;com.visa.training.jdbc.ProductDAO.findById()&apos; to &apos;com.visa.training.jdbc.ProductDAO&apos;&#x0A;- Original project: &apos;jdbcProject&apos;&#x0A;- Method name: &apos;mapRow&apos;&#x0A;- Destination type: &apos;com.visa.training.jdbc.ProductDAO&apos;&#x0A;- Declared visibility: &apos;private&apos;" comments="false" description="Extract method &apos;mapRow&apos;" destination="0" exceptions="false" flags="786434" id="org.eclipse.jdt.ui.extract.method" input="/src\/main\/java&lt;com.visa.training.jdbc{ProductDAO.java" name="mapRow" replace="false" selection="1377 137" stamp="1563191105556" version="1.0" visibility="2"/>
+</session>

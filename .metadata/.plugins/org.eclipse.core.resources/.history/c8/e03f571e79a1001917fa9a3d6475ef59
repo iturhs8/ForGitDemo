@@ -1,0 +1,30 @@
+
+public class Circle {
+	int radius;
+	public Circle(int radius)
+	{
+		this.radius=radius;
+	}
+	public String getShapeName()
+	{
+		return"Circle";
+	}
+	public double computeArea(int radius)
+	{
+		double area;
+		area = 3.14*radius*radius;
+		return area;
+	}
+
+
+//class CircleApp{
+	public void main(String[] args) {
+		int r=0;
+		double area;
+		Circle newCircle = new Circle(r);
+		area = newCircle.computeArea(10);
+		System.out.println(area);
+		
+	}
+//}
+}

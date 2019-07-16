@@ -1,0 +1,58 @@
+
+
+class DayOfWeek {
+	
+	static int findDOW(int day, int month, int year ){
+		int numDays = (year-1900)*365;
+		numDays+=(year-1900)/4;
+		if(year%4==0 && month<=2) {
+		numDays--;
+		}
+		switch(month) {
+		case 12:
+			numDays+=30;
+		case 11:
+			numDays+=31;
+		case 10:
+			numDays+=30;
+		case 9:
+			numDays+=31;
+		case 8:
+			numDays+=31;
+		case 7:
+			numDays+=30;
+		case 6:
+			numDays+=31;	
+		case 5:
+			numDays+=30;
+		case 4:
+			numDays+=31;
+		case 3:
+			numDays+=28;
+		case 2:
+			numDays+=31;
+		}
+		numDays+ = day	
+		a = numDays%7;
+		return a;
+		
+	}
+	public static void main(String[] args) {
+	int a  = findDOW(8,07,2019);
+	if(a==0 )
+		System.out.println("Sunday");
+	else if(a==1)
+		System.out.println("Monday");
+	else if(a==2)
+		System.out.println("Tuesday");
+	else if(a==3)
+		System.out.println("Wednesday");
+	else if(a==4)
+		System.out.println("Thursday");
+	else if(a==5)
+		System.out.println("Friday");
+	else if(a==6)
+		System.out.println("Saturday");
+	}
+}
+

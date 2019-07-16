@@ -1,0 +1,20 @@
+
+public class Circle {
+	//int radius;
+//	public Circle(int radius)
+//	{
+//		this.radius=radius;
+//	}
+//	public String getShapeName()
+//	{
+//		return"Circle";
+//	}
+//	public double computeArea(int radius)
+//	{
+//		double area;
+//		area = 3.14*radius*radius;
+//		return area;
+//	}
+
+	List<Object> radius = new ArrayList<Object>();
+}

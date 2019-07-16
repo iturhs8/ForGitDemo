@@ -1,0 +1,23 @@
+package com.visa.training.jdbc;
+
+import java.util.List;
+
+//DAO class has CRUD + Query methods 
+public class ProductDAO {
+
+		public void save(Product toBeSaved) {
+		//Insert	
+		}
+		public Product findById(Integer id) {
+		//Read based on Id
+		}
+		public List<Product> findAll(){
+		//Read All
+		}
+		public void remove(Integer id) {
+		//delete	
+		}
+		public void update(Product updated) {
+		//update	
+		}
+}

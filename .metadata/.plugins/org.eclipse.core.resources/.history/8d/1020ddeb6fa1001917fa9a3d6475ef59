@@ -1,0 +1,39 @@
+
+public class ChemicalElement {
+	
+	String symbolicName;
+	int atomicNumber;
+	String fullName;
+	
+	public ChemicalElement(String symbolicName, int atomicNumber, String fullName) {
+		this.symbolicName = symbolicName;
+		this.atomicNumber = atomicNumber;
+		this.fullName = fullName;
+	}
+	
+	public static String isAlkaliMetal(int atomicNumber) {
+		switch(atomicNumber) {
+		case 3:
+		return "Alkali Metal";
+		case 11:
+		return "Alkali Metal";
+		case 19:
+		return "Alkali Metal";
+		case 37:
+		return "Alkali Metal";
+		case 55:
+		return "Alkali Metal";
+		case 87:
+		return ("Alkali Metal");
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		
+	ChemicalElement metal = new ChemicalElement("H",1,"Hydrogen");
+	System.out.println(metal.isAlkaliMetal(atomicNumber));
+		
+	}
+
+}

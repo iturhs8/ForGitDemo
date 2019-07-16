@@ -1,0 +1,11 @@
+import java.util.Arrays;
+import java.util.List;
+
+public class LambdaStream {
+
+		public static void main(String[] args) {
+			List<String> words = Arrays.asList("hi", "hello", "How","are","you","doing","?");
+			words.stream().forEach(s->System.out.println("  "+s));
+			
+		}
+}

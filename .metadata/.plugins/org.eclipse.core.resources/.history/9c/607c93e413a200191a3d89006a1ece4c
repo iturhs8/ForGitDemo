@@ -1,0 +1,5 @@
+
+interface Stack {
+	public void push(Object element);
+	public int pop();
+}
