@@ -66,3 +66,14 @@
 127.0.0.1 - - [16/Jul/2019:11:54:29 +0000] "GET /mywebapp/addbooks?books=Book+1 HTTP/1.1" 200 485
 127.0.0.1 - - [16/Jul/2019:11:54:31 +0000] "GET /mywebapp/addcars?cars=Car+3 HTTP/1.1" 200 502
 127.0.0.1 - - [16/Jul/2019:11:54:35 +0000] "GET /mywebapp/addbikes?bikes=Bike+4 HTTP/1.1" 200 179
+127.0.0.1 - - [16/Jul/2019:11:59:53 +0000] "GET /mywebapp/addbooks HTTP/1.1" 200 485
+127.0.0.1 - - [16/Jul/2019:12:00:05 +0000] "GET /mywebapp/addcars?cars=Car+2 HTTP/1.1" 200 502
+127.0.0.1 - - [16/Jul/2019:12:00:08 +0000] "GET /mywebapp/addbikes?bikes=Bike+5 HTTP/1.1" 500 42
+127.0.0.1 - - [16/Jul/2019:12:00:44 +0000] "GET / HTTP/1.1" 404 1074
+127.0.0.1 - - [16/Jul/2019:12:00:45 +0000] "GET /mywebapp/index.html HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2019:12:00:48 +0000] "GET /mywebapp/books.html HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2019:12:00:51 +0000] "GET /mywebapp/addbooks?books=Book+1 HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2019:12:00:53 +0000] "GET /mywebapp/addcars?cars=Car+3 HTTP/1.1" 304 -
+127.0.0.1 - - [16/Jul/2019:12:00:55 +0000] "GET /mywebapp/addbikes?bikes=Bike+3 HTTP/1.1" 200 179
+177.138.97.244 - - [16/Jul/2019:12:17:53 +0000] "GET / HTTP/1.1" 404 1074
+46.174.191.31 - - [16/Jul/2019:12:39:11 +0000] "GET / HTTP/1.0" 404 1074
